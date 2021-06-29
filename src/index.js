@@ -1,12 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
 
-import WelcomeOnBoarding from './screens/WelcomeOnBoarding';
-
+// import WelcomeOnBoarding from './screens/WelcomeOnBoarding';
+import Routes from './routes';
 // import { Container } from './styles';
 
 const App = () => {
-  return <WelcomeOnBoarding />;
+  return <Routes />;
 };
 
 export default App;
