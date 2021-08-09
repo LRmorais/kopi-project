@@ -14,9 +14,9 @@ import {theme} from '../../utils/style';
 import Spacer from '../../components/spacer';
 import {RoundedButton} from '../../components/roundedButton/index';
 
-import Illustration1 from '../../images/stuff/onboarding-illustration-1.png';
-import Illustration2 from '../../images/stuff/onboarding-illustration-2.png';
-import Illustration3 from '../../images/stuff/onboarding-illustration-3.png';
+import Illustration1 from '../../images/stuff/ilustration1.jpeg';
+import Illustration2 from '../../images/stuff/ilustration2.png';
+import Illustration3 from '../../images/stuff/ilustration3.jpeg';
 
 const phoneHeight = Dimensions.get('window').height;
 
@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const WelcomeOnBoarding = () => {
+const WelcomeOnBoarding = props => {
+  const {navigate} = props.navigation;
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={theme.palette.primary.main} />
@@ -154,7 +155,12 @@ const WelcomeOnBoarding = () => {
         />
       </View>
       <View style={styles.actionsContainer}>
-        <RoundedButton action={() => {}} title="ENTRAR" />
+        <RoundedButton
+          action={() => {
+            navigate('SignIn');
+          }}
+          title="ENTRAR"
+        />
         <Spacer size={2} fixedSize />
         <RoundedButton action={() => {}} outlined title="CADASTRE-SE" />
       </View>

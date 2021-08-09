@@ -17,10 +17,15 @@ const StackApp = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <StackApp.Navigator initialRouteName="Login">
+      <StackApp.Navigator initialRouteName="WelcomeOnBoarding">
         <StackApp.Screen
-          name="Login"
+          name="WelcomeOnBoarding"
           component={Screens.WelcomeOnBoarding}
+          options={navOptionsHandler}
+        />
+        <StackApp.Screen
+          name="SignIn"
+          component={Screens.Signin}
           options={navOptionsHandler}
         />
       </StackApp.Navigator>
