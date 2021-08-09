@@ -1,7 +1,7 @@
 import React from 'react';
-import {View} from 'react-native';
-import Routes from '../src/routes';
 
+// import WelcomeOnBoarding from './screens/WelcomeOnBoarding';
+import Routes from './routes';
 // import { Container } from './styles';
 
 const App = () => {
