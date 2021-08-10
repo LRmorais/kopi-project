@@ -28,6 +28,16 @@ export default function App() {
           component={Screens.Signin}
           options={navOptionsHandler}
         />
+        <StackApp.Screen
+          name="IpConnect"
+          component={Screens.IpConnect}
+          options={navOptionsHandler}
+        />
+        <StackApp.Screen
+          name="Home"
+          component={Screens.Home}
+          options={navOptionsHandler}
+        />
       </StackApp.Navigator>
     </NavigationContainer>
   );

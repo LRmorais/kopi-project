@@ -10,12 +10,8 @@ const Provider = props => {
   function goBackOnboarding() {
     navigate('WelcomeOnBoarding');
   }
-  function goToHome() {
-    navigate('IpConnect');
-  }
   const value = {
     goBackOnboarding,
-    goToHome,
   };
 
   return <Context.Provider value={value}>{props.children}</Context.Provider>;

@@ -11,7 +11,7 @@ import {useContext} from './context';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Screen = () => {
-  const {goBackOnboarding: handlePress} = useContext();
+  const {goBackOnboarding: handlePress, goToHome} = useContext();
   const [text, onChangeText] = React.useState('');
 
   return (
@@ -133,7 +133,8 @@ const Screen = () => {
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 20,
-          }}>
+          }}
+          onPress={goToHome}>
           <Text>Entrar</Text>
         </TouchableOpacity>
       </View>

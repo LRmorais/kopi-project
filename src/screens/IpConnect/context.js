@@ -7,14 +7,10 @@ const username = 'teste';
 const Provider = props => {
   const {navigate} = props.navigation;
 
-  function goBackOnboarding() {
-    navigate('WelcomeOnBoarding');
-  }
   function goToHome() {
-    navigate('IpConnect');
+    navigate('Home');
   }
   const value = {
-    goBackOnboarding,
     goToHome,
   };
 
