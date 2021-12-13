@@ -9,6 +9,7 @@ import {
 import {useContext} from './context';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import {ButtonGame} from '../../components/Button';
 
 const style = StyleSheet.create({
   container: {
@@ -19,6 +20,7 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     height: '90%',
     justifyContent: 'space-evenly',
+    padding: 10,
   },
   header: {
     flexDirection: 'column',
@@ -33,7 +35,6 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '50%',
-    // backgroundColor: 'red',
   },
   rowOneButton: {
     flexDirection: 'row',
@@ -42,16 +43,6 @@ const style = StyleSheet.create({
   textNumber: {
     color: '#30287b',
     fontSize: 90,
-  },
-  backgroundColorButtons: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    width: '30%',
-  },
-  rowTwoButton: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
   },
 });
 
@@ -68,24 +59,10 @@ const Screen = () => {
           </View>
 
           <View style={style.buttonsContainer}>
-            <View style={style.rowOneButton}>
-              <TouchableOpacity style={style.backgroundColorButtons}>
-                <Text style={style.textNumber}>1</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={style.backgroundColorButtons}>
-                <Text style={style.textNumber}>2</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={style.rowTwoButton}>
-              <TouchableOpacity style={style.backgroundColorButtons}>
-                <Text style={style.textNumber}>3</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={style.backgroundColorButtons}>
-                <Text style={style.textNumber}>4</Text>
-              </TouchableOpacity>
-            </View>
+            <ButtonGame title="Alternativa A" background="red" />
+            <ButtonGame title="Alternativa B" background="#0000FF" />
+            <ButtonGame title="Alternativa C" background="#DAA520" />
+            <ButtonGame title="Alternativa D" background="#3CB371" />
           </View>
         </View>
       </SafeAreaView>

@@ -1,6 +1,5 @@
 import React from 'react';
 import {View} from 'react-native';
-import PropTypes from 'prop-types';
 
 import {theme} from '../../utils/style';
 
@@ -20,18 +19,5 @@ const Spacer = props => (
     }
   />
 );
-
-Spacer.propTypes = {
-  fixedSize: PropTypes.bool,
-  horizontal: PropTypes.bool,
-  setMinSize: PropTypes.bool,
-  size: PropTypes.number.isRequired,
-};
-
-Spacer.defaultProps = {
-  fixedSize: false,
-  horizontal: false,
-  setMinSize: false,
-};
 
 export default Spacer;

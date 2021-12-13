@@ -12,11 +12,11 @@ import OnBoarding from 'react-native-onboarding-swiper';
 import {theme} from '../../utils/style';
 
 import Spacer from '../../components/spacer';
-import {RoundedButton} from '../../components/roundedButton/index';
 
 import Illustration1 from '../../images/stuff/ilustration1.jpeg';
 import Illustration2 from '../../images/stuff/ilustration2.png';
 import Illustration3 from '../../images/stuff/ilustration3.jpeg';
+import {CommonButton} from '../../components/Button';
 
 const phoneHeight = Dimensions.get('window').height;
 
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const WelcomeOnBoarding = props => {
+const WelcomeOnBoarding = (props) => {
   const {navigate} = props.navigation;
   return (
     <View style={styles.container}>
@@ -155,14 +155,7 @@ const WelcomeOnBoarding = props => {
         />
       </View>
       <View style={styles.actionsContainer}>
-        <RoundedButton
-          action={() => {
-            navigate('SignIn');
-          }}
-          title="ENTRAR"
-        />
-        <Spacer size={2} fixedSize />
-        <RoundedButton action={() => {}} outlined title="CADASTRE-SE" />
+        <Button title='ENTRAR' />
       </View>
     </View>
   );

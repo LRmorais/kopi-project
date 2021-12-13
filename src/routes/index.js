@@ -20,7 +20,7 @@ export default function App() {
       <StackApp.Navigator initialRouteName="WelcomeOnBoarding">
         <StackApp.Screen
           name="WelcomeOnBoarding"
-          component={Screens.WelcomeOnBoarding}
+          component={Screens.Home}
           options={navOptionsHandler}
         />
         <StackApp.Screen
