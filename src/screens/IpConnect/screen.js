@@ -11,8 +11,7 @@ import {useContext} from './context';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Screen = () => {
-  const {goToHome: handlePress} = useContext();
-  const [text, onChangeText] = React.useState('');
+  const {goToHome: handlePress, setIpAdress, ipAdress} = useContext();
 
   return (
     <View style={{backgroundColor: '#30287b', flex: 1}}>
@@ -28,7 +27,7 @@ const Screen = () => {
           style={{
             flexDirection: 'column',
             height: '30%',
-            justifyContent: 'space-around',
+            justifyContent: 'space-between',
             alignItems: 'center',
           }}>
           <View
@@ -59,8 +58,8 @@ const Screen = () => {
                 paddingLeft: 8,
                 paddingRight: 8,
               }}
-              onChangeText={onChangeText}
-              value={text}
+              onChangeText={setIpAdress}
+              value={ipAdress}
             />
           </View>
 

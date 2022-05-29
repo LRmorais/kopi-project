@@ -47,7 +47,12 @@ const style = StyleSheet.create({
 });
 
 const Screen = () => {
-  const {goBackOnboarding: handlePress} = useContext();
+  const {
+    goBackOnboarding: handlePress,
+    sendAnswer,
+    realTime,
+    nextState,
+  } = useContext();
   const [text, onChangeText] = React.useState('');
 
   return (
@@ -55,15 +60,40 @@ const Screen = () => {
       <SafeAreaView>
         <View style={style.content}>
           <View style={style.header}>
-            <Text style={style.time}>25</Text>
+            <Text style={style.time}>{realTime}</Text>
           </View>
-
-          <View style={style.buttonsContainer}>
-            <ButtonGame title="Alternativa A" background="red" />
-            <ButtonGame title="Alternativa B" background="#0000FF" />
-            <ButtonGame title="Alternativa C" background="#DAA520" />
-            <ButtonGame title="Alternativa D" background="#3CB371" />
-          </View>
+          {nextState ? null : (
+            <View style={style.buttonsContainer}>
+              <ButtonGame
+                title="Alternativa A"
+                background="red"
+                onPress={() => {
+                  sendAnswer('a');
+                }}
+              />
+              <ButtonGame
+                title="Alternativa B"
+                background="#0000FF"
+                onPress={() => {
+                  sendAnswer('b');
+                }}
+              />
+              <ButtonGame
+                title="Alternativa C"
+                background="#DAA520"
+                onPress={() => {
+                  sendAnswer('c');
+                }}
+              />
+              <ButtonGame
+                title="Alternativa D"
+                background="#3CB371"
+                onPress={() => {
+                  sendAnswer('d');
+                }}
+              />
+            </View>
+          )}
         </View>
       </SafeAreaView>
     </View>

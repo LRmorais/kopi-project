@@ -17,22 +17,22 @@ const StackApp = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <StackApp.Navigator initialRouteName="WelcomeOnBoarding">
-        <StackApp.Screen
+      <StackApp.Navigator initialRouteName="Home">
+        {/* <StackApp.Screen
           name="WelcomeOnBoarding"
-          component={Screens.Home}
+          component={Screens.IpConnect}
           options={navOptionsHandler}
-        />
-        <StackApp.Screen
+        /> */}
+        {/* <StackApp.Screen
           name="SignIn"
           component={Screens.Signin}
           options={navOptionsHandler}
-        />
-        <StackApp.Screen
+        /> */}
+        {/* <StackApp.Screen
           name="IpConnect"
           component={Screens.IpConnect}
           options={navOptionsHandler}
-        />
+        /> */}
         <StackApp.Screen
           name="Home"
           component={Screens.Home}
